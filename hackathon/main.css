@@ -1,0 +1,127 @@
+@font-face
+{
+    font-family: bebasNeue;
+    src: url(BebasNeue-Book.otf);
+}
+@font-face
+{
+    font-family: regularRubik;
+    src: url(Rubik-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: #003262;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    font-family: regularRubik;
+    text-align: center;
+    
+
+
+}
+
+form div{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.main-header{
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    
+}
+
+select{
+    margin-top: 10px;
+    width: 300px;
+    font-size: 50px;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s all;
+    
+}
+
+label{
+    font-size: 60px;
+}
+
+input{
+    font-size: 35px;
+    outline: none;
+    padding: 10px;
+}
+
+button{
+    width: 300px;
+    font-size: 60px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 20px;
+    transition: 0.3s all;
+}
+
+
+
+.all-answered h1{
+    display: none;
+}
+
+.answer{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-family: bebasNeue;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.risk-death,
+.risk-catch{
+    text-align: center;
+}
+
+.risk-catch{
+    background: transparent;
+    color: white;
+}
+.risk-death{
+    background: transparent;
+    color: white;
+}
+
+select:hover{
+    background: #fdb515;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #fdb515;
+    cursor: pointer;
+}
+
+p{
+    font-size: 40px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-header">
+        <h1>NJ Coronavirus Risk Calculator</h1>
+    </div>
+    
+    <form action="#">
+        <div class="county">
+            <label >What County do you Live In?</label>
+            <select name="county" id="county">
+                <option value="select">Select</option>
+                <option value="atlantic">Atlantic</option>
+                <option value="bergen">Bergen</option>
+                <option value="burlington">Burlington</option>
+                <option value="camden">Camden</option>
+                <option value="capemay">Cape May</option>
+                <option value="cumberland">Cumberland</option>
+                <option value="essex">Essex</option>
+                <option value="gloucester">Gloucester</option>
+                <option value="hudson">Hudson</option>
+                <option value="hunterdon">Hunterdon</option>
+                <option value="mercer">Mercer</option>
+                <option value="middlesex">Middlesex</option>
+                <option value="monmouth">Monmouth</option>
+                <option value="morris">Morris</option>
+                <option value="ocean">Ocean</option>
+                <option value="passaic">Passaic</option>
+                <option value="salem">Salem</option>
+                <option value="somerset">Somerset</option>
+                <option value="sussex">Sussex</option>
+                <option value="union">Union</option>
+                <option value="warren">Warren</option>
+
+
+            </select>
+
+        </div>
+        <div class="age">
+            <label >What is your Age?</label>
+            <input type="number" name="age" id="age">
+        </div>
+        <div class="smoke">
+            <label >Do you Smoke or Vape?</label>
+            <select name="smoke" id="smoke">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+
+        </div>
+        <div class="asthma">
+            <label >Do you have asthma or a condition that effects your lung Capacity/Efficiency?
+            </label>
+            <select name="asthma" id="asthma">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+
+        </div>
+        <div class="covid">
+            <label >Have You Previosly Had the Coronavirus?</label>
+            <select name="covid" id="covid">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+
+
+            </select>
+        </div>
+        <div class="social-distancing">
+            <label >How Well do You Pracice Social Distancing?</label>
+            <select name="social-distancing" id="social-distancing">
+                <option value="select">Select</option>
+                <option value="very-well">Very Well</option>
+                <option value="well">Well</option>
+                <option value="not-well">Not So Well</option>
+                <option value="very-badly">Very Badly</option>
+
+
+            </select>
+        </div>
+        <div class="masks">
+            <label >How often do you Wear Masks when in Public Places?</label>
+            <select name="masks" id="masks">
+                <option value="select">Select</option>
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="half">About Half the Time</option>
+                <option value="almost-every">Almost Every Time</option>
+                <option value="every">Every time</option>
+
+
+            </select>
+
+        </div>
+        <div class="family">
+            <label >Does an Immediate Family Member Currenty Have COVID-19?</label>
+            <select name="family" id="family">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="hands">
+            <label >How Often Do You Wash Your Hands?</label>
+            <select name="hands" id="hands">
+                <option value="select">Select</option>
+                <option value="never">Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="frequently">Frequently</option>
+               
+            </select>
+        </div>
+        <div class="human-interaction">
+            <label >Are you currently working a job that exposes you to human interaction?
+            </label>
+            <select name="human-interaction" id="human-interaction">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="patients">
+            <label >Are you currently working a job where you are surrounded by Coronavirus patients?</label>
+            <select name="patients" id="patients">
+                <option value="select">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="community">
+            <label >Are the cases in your community increasing, decreasing, or stabilizing?
+            </label>
+            <select name="community" id="community">
+                <option value="select">Select</option>
+                <option value="increasing">Increasing</option>
+                <option value="decreasing">Decreasing</option>
+                <option value="stabilizing">Stabilizing</option>
+            </select>
+        </div>
+        <div class="button">
+            <button type="button" onclick="calcAnswer()">Calculate</button>
+            </div>
+        <div class="all-answered">
+            <h1>Make Sure All Answers are Filled In</h1>
+        </div>
+
+
+
+
+
+    </form>
+    <div class="answer">
+        <div class="risk-catch">
+            <h1 class="risk-score">none</h1>
+            <h1 class="risk-catch-caption">Risk of Getting COVID-19</h1>
+        </div>
+        <div class="risk-death">
+            <h1 class="death-score">none</h1>
+            <h1 class="risk-death-caption">Risk of Death from COVID-19</h1>
+        </div>
+        
+        
+
+    </div>
+    <div class="risk-explain">
+        <p>Low Risk: 0-4</p>
+        <p>Moderate Risk: 4-7</p>
+        <p>High Risk: 7-10</p>
+    </div>
+    
+</body>
+</html>

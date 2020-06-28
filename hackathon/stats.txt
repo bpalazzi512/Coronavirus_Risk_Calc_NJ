@@ -1,0 +1,21 @@
+Atlantic, 1025.5
+Bergen, 2032.4
+Burlington, 1133.0
+Camden, 1410.6
+Cape May, 747.6
+Cumberland, 1905.0
+Essex, 2322.9
+Gloucester, 848.0
+Hudson, 2774.2
+Hunterdon, 849.9
+Mercer, 2041.3
+Middlesex, 2002.9
+Monmouth, 1442.8
+Morris, 1359.3
+Ocean, 1569.0
+Passaic, 3332.3
+Salem, 1201.1
+Somerset, 1455.2
+Sussex, 836.7
+Union, 2928.0
+Warren, 1151.5
